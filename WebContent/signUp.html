@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr'>
 <head>
-	<meta charset="UTF-8">
-	<title>Connexion</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Inscription</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css"> 
 	<!--BOOTSTRAP CSS IMPORT-->
 	<link rel="stylesheet"
@@ -22,19 +22,24 @@
 
 
 						<input type="login" name="login" id="inputPassword"
-						class="form-control form-group" placeholder="Login" required
+						class="form-control form-group" placeholder="Choisissez un Login" required
 						autofocus>
 						
 						<input type="password" name="password" id="inputPassword"
-						class="form-control form-group" placeholder="Mot De Passe" required
+						class="form-control form-group" placeholder="Choisissez un Mot De Passe" required
+						autofocus>
+						
+						<input type="password" name="passwordConfirm" id="inputPassword"
+						class="form-control form-group" placeholder="Confirmez le Mot De Passe" required
 						autofocus>
 						
 						<button class="btn btn-lg btn-primary btn-block btn-signin"
-						type="submit">Se connecter</button>
+						type="submit">Inscription</button>
 						
 						<br>
-						<p id="noAccount">Pas de compte ?</p>
-						<button class="btn btn-lg btn-primary btn-block btn-signin" onClick="javascript:document.location.href='signUp.html'">S'inscrire</button>
+						<p id="noAccount">Deja Inscrit ?</p>
+						<button class="btn btn-lg btn-primary btn-block btn-signin" onClick="javascript:document.location.href='index.html'">Se connecter</button>
+					
 					</form>
 					<!-- /form -->
 				</div>
