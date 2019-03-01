@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tomcat.jni.User;
+
 /**
  * Servlet implementation class SignUp
  */
@@ -46,6 +48,13 @@ public class SignUp extends HttpServlet {
 		if(pwd == null || pwd.equals("") || pwd.equals(" ")) {
 		out.println("<script>alert('le mot de passe ne peut pas être vide');</script>");
 		}
+		
+		User u = new User(lgin, pwd);
+		DS ds = new DS();
+		UserDAO udao = new UserDAO(ds);
+		
+		Encrypt e = new Encrypt();
+		udao.create(u);
 		
 		
 	}

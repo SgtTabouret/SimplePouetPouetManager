@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.apache.catalina.User;
+
 public class UserDAO {
 
 	private static DS ds;
@@ -36,6 +38,7 @@ public class UserDAO {
 		try(Connection con = ds.getConnection()){
 			PreparedStatement ps = con.prepareStatement(query);
 			ps.setString(1, user.getLogin());
+			ps.setString(2, user.getPassphrase());
 			ps.executeUpdate();
 		} catch(SQLException e) {
 			System.out.println("Erreur: " + e.getMessage());
