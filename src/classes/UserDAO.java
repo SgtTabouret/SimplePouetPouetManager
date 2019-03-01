@@ -22,7 +22,7 @@ public class UserDAO {
 			ps.setString(1, login);
 			ResultSet rs = ps.executeQuery();
 			if(rs.next()) 
-				u = new User(rs.getInt("uno"),rs.getString("login"));
+				u = new User(rs.getInt("uno"),rs.getString("login"),rs.getString("passphrase"));
 
 		} catch(SQLException e) {
 			System.out.println("Erreur: " + e.getMessage());
@@ -31,7 +31,7 @@ public class UserDAO {
 	}
 
 	public static void create(User user) {
-		String query = "Insert into users values (?)";
+		String query = "Insert into users values (?,?)";
 	
 		try(Connection con = ds.getConnection()){
 			PreparedStatement ps = con.prepareStatement(query);
