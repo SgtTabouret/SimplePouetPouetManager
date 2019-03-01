@@ -1,0 +1,15 @@
+body,html {
+    background-image: url('http://i.imgur.com/xhiRfL6.jpg');
+    height: 100%;
+}
+
+#profile-img {
+    height:180px;
+}
+.h-80 {
+    height: 80% !important;
+}
+
+#noAccount{
+	color: #FFFFFF;
+}
